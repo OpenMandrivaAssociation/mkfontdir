@@ -1,6 +1,6 @@
 Name: mkfontdir
-Version: 1.0.2
-Release: %mkrel 2
+Version: 1.0.3
+Release: %mkrel 1
 Summary: Create an index of X font files in a directory
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -39,6 +39,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/mkfontdir
-%{_mandir}/man1/mkfontdir.1x.bz2
+%{_mandir}/man1/mkfontdir.1*.bz2
 
 
