@@ -1,14 +1,15 @@
 Name: mkfontdir
 Version: 1.0.3
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Create an index of X font files in a directory
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
-
 BuildRequires: x11-util-macros >= 1.0.1
 
+# mkfontdir is currently nothing more than a call to mkfontscale
+Requires: mkfontscale
 
 %description
 Mkfontdir creates an index of X font files in a directory.
@@ -24,8 +25,7 @@ to find font files.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
+%configure
 
 %make
 
@@ -40,5 +40,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/mkfontdir
 %{_mandir}/man1/mkfontdir.1*.bz2
-
 
