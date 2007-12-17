@@ -5,7 +5,6 @@ Summary: Create an index of X font files in a directory
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: x11-util-macros >= 1.0.1
 
 # mkfontdir is currently nothing more than a call to mkfontscale
