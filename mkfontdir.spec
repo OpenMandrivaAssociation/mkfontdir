@@ -1,5 +1,5 @@
 Name: mkfontdir
-Version: 1.0.5
+Version: 1.0.6
 Release: %mkrel 1
 Summary: Create an index of X font files in a directory
 Group: Development/X11
