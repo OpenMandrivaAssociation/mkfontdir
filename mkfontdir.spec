@@ -1,14 +1,15 @@
-Name: mkfontdir
-Version: 1.0.7
-Release: 1
-Summary: Create an index of X font files in a directory
-Group: Development/X11
-Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
-License: MIT
-BuildRequires: x11-util-macros >= 1.0.1
-
+Name:		mkfontdir
+Version:	1.0.7
+Release:	2
+Summary:	Create an index of X font files in a directory
+Group:		Development/X11
+License:	MIT
+URL:		http://xorg.freedesktop.org
+Source:		http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+BuildRequires:	x11-util-macros >= 1.0.1
 # mkfontdir is currently nothing more than a call to mkfontscale
-Requires: mkfontscale
+Requires:	mkfontscale
+BuildArch:	noarch
 
 %description
 Mkfontdir creates an index of X font files in a directory.
@@ -21,11 +22,10 @@ file "fonts.dir" in the directory. The X server and font server use "fonts.dir"
 to find font files.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
-%configure
-
+%configure2_5x
 %make
 
 %install
