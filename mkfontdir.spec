@@ -1,7 +1,7 @@
 Summary:	Create an index of X font files in a directory
 Name:		mkfontdir
 Version:	1.0.7
-Release:	6
+Release:	7
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
