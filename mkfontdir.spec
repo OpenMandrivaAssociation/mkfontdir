@@ -1,7 +1,7 @@
 Summary:	Create an index of X font files in a directory
 Name:		mkfontdir
 Version:	1.0.7
-Release:	18
+Release:	19
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
@@ -22,16 +22,15 @@ file "fonts.dir" in the directory. The X server and font server use "fonts.dir"
 to find font files.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/mkfontdir
 %{_mandir}/man1/mkfontdir.1*
-
